@@ -32,6 +32,7 @@ module.exports = {
     extensions: ['.vue', '.js']
   },
   optimization: {
+    runtimeChunk: { name: 'runtime' },
     splitChunks: {
       cacheGroups: {
         vendor: {
