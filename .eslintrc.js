@@ -21,5 +21,10 @@ module.exports = {
     jest: true
   },
   globals: {},
-  rules: {}
+  rules: {
+    'no-console': ['error', { allow: ['error'] }],
+    'semi': ['error', 'never'],
+    'quotes': ['error', 'single'],
+    'no-undef': 'error'
+  }
 }
