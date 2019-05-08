@@ -24,7 +24,11 @@ module.exports = merge(baseWebpack, {
     overlay: true,
     proxy: [
       {
-        context: '/api',
+        context: [
+          '/posts',
+          '/comments',
+          '/profile'
+        ],
         target: 'http://localhost:4001',
         changeOrigin: true
       }
