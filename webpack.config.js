@@ -29,7 +29,7 @@ module.exports = {
           test: /node_modules.*\.js$/,
           name: 'vendor',
           chunks: 'all'
-        },
+        }
       }
     }
   },
@@ -46,6 +46,15 @@ module.exports = {
         use: {
           loader: 'babel-loader'
         }
+      },
+      {
+        test: /.scss$/,
+        use: [
+          { loader: 'vue-style-loader' },
+          { loader: 'css-loader' },
+          { loader: 'postcss-loader' },
+          { loader: 'sass-loader' }
+        ]
       }
     ]
   },
@@ -61,7 +70,7 @@ module.exports = {
     publicPath: '/',
     host: 'localhost',
     port: 4000,
-    open: true,
+    // open: true,
     hot: true,
     overlay: true
   }
