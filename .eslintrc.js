@@ -21,5 +21,7 @@ module.exports = {
     jest: true
   },
   globals: {},
-  rules: {}
+  rules: {
+    'jsx-quotes': ['error', 'prefer-double']
+  }
 }

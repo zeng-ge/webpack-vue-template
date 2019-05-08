@@ -1,7 +1,4 @@
-import axios from 'axios'
-const http = axios.create({
-  baseURL: '/'
-})
+import http from './http'
 export default {
   data () {
     return {
@@ -15,7 +12,16 @@ export default {
   },
   render () {
     return (
-      <div>post: {this.post.title }</div>
+      <div>
+        <div>post: {this.post.title }</div>
+        <div>
+          <router-link to="/post">POST</router-link>
+          <router-link to="/profile">Profile</router-link>
+        </div>
+        <div>
+          <router-view></router-view>
+        </div>
+      </div>
     )
   }
 }
