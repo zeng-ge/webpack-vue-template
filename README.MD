@@ -37,6 +37,7 @@
 
 ### 其它
 1. node-sass
+2. autoprefixer
 
 # step 2
 ## 开发环境完善eslint + jsx(2)
