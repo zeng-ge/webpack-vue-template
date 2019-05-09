@@ -6,6 +6,9 @@ const baseWebpack = require('./base.config.js')
 module.exports = merge(baseWebpack, {
   devtool: 'cheap-module-source-map',
   plugins: [
+    new webpack.EnvironmentPlugin({
+      'BUILD_ENV': process.env.BUILD_ENV
+    }),
     /**
      * 开启模块的热替换，HMR，和devServer的hot: true 一起使用才行
      */

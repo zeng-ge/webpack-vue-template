@@ -6,7 +6,7 @@
   "author": "zengge <gzeng@thoughtworks.com>",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --config ./webpack/development.config.js",
+    "start": "BUILD_ENV=SIT webpack-dev-server --config ./webpack/development.config.js",
     "build:dev": "webpack --config ./webpack/development.config.js",
     "build:prod": "webpack --config ./webpack/production.config.js",
     "bff": "json-server server.json --port 4001"
